@@ -8,6 +8,12 @@ def get_headlines():
 
     headlines = []
 
+    links = soup.find_all('a') #find all code with tag a
+
+    for link in links:
+      headline = link.find('h3')
+      if headline != None: 
+        print(headline.text)
     return headlines
     
 def get_links():
@@ -18,7 +24,9 @@ def get_links():
 
     articles = []
 
+    links = soup.find_all('')
+  
     return articles
     
-#print(get_headlines())
-print(get_links())
+get_headlines()
+#print(get_links())
